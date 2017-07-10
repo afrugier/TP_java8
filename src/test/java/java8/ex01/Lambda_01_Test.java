@@ -99,7 +99,7 @@ public class Lambda_01_Test {
 		// passwordSha512Hex
 		// TODO Pour obtenir le hash d'un mot, utiliser la méthode
 		// DigestUtils.sha512Hex(mot)
-		List<Person> result0 = filter(personList, p -> p.getAge() >= 49);
+		List<Person> result0 = filter(personList, p -> p.getAge() > 49);
 		List<Person> result = filter(result0, p -> DigestUtils.sha512Hex(p.getPassword()).equals(passwordSha512Hex));
 
 		assert result.size() == 6;
