@@ -49,7 +49,7 @@ public class Optional_03_Test {
 		// TODO Utiliser la méthode orElseThrow pour déclencher l'exception
 		// GoodException si non trouvé
 		// accOpt.map...
-		accOpt.map(p -> p.getOwner().getFirstname()).orElseThrow(() -> new GoodException());
+		accOpt.map(Account::getOwner).map(Person::getFirstname).orElseThrow(() -> new GoodException());
 	}
 
 	@Test(expected = GoodException.class)
@@ -61,7 +61,7 @@ public class Optional_03_Test {
 		// TODO Utiliser la méthode orElseThrow pour déclencher l'exception
 		// GoodException si non trouvé
 		// accOpt.map...
-		accOpt.map(p -> p.getOwner()).orElseThrow(() -> new GoodException());
+		accOpt.map(Account::getOwner).map(Person::getFirstname).orElseThrow(() -> new GoodException());
 	}
 
 	@Test(expected = GoodException.class)
@@ -72,8 +72,8 @@ public class Optional_03_Test {
 		// person -> firstname)
 		// TODO Utiliser la méthode orElseThrow pour déclencher l'exception
 		// GoodException si non trouvé
-		// accOpt.map...
-		accOpt.map(p -> p.getOwner().getFirstname()).orElseThrow(() -> new GoodException());
+		// accOpt.map...*
+		accOpt.map(Account::getOwner).map(Person::getFirstname).orElseThrow(() -> new GoodException());
 	}
 
 	@Test
