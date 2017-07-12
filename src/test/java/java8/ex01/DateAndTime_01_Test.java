@@ -20,14 +20,14 @@ public class DateAndTime_01_Test {
         // TODO modifier les paramètres pour que le test soit passant
         Date date = new Date(117, 2, 24, 1,2,3);
 
-        assertThat(date.toString(), is("Fri Mar 24 1:2:3 CET 2017"));
+        assertThat(date.toString(), is("Fri Mar 24 01:02:03 CET 2017"));
 
         // une date est mutable... :-(
         // TODO modifier le jour de la date pour que le test soit passant
         
         date.setDate(25);
 
-        assertThat(date.toString(), is("Sat Mar 25 1:2:3 CET 2017"));
+        assertThat(date.toString(), is("Sat Mar 25 01:02:03 CET 2017"));
     }
 
     // Vous vous souvenez de java.util.Calendar (Java 1.1) ?
